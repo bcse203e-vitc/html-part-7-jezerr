@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let s=prompt("Enter string");
+        let cleans=s.replace(/[^a-zA-Z0-9]/g,"").toLowerCase();//remove space and other spec char accepts only a-z A-Z 0-9 
+        let y=cleans.split("").reverse().join("");
+        document.write("Entered Sentence:"+s+"<br>");
+        document.write("Reversed Sentence:"+y+"<br>");
+        if(y===cleans){
+            document.write("Yes it is a palindrome<br>");
+        }
+        else{
+            document.write("No it is not a palindrome<br>");
+        }
+    </script>
+</body>
+</html>
