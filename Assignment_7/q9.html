@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cont{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .btn{
+            margin:auto;
+            padding:10px 20px ;
+            border-radius: 10px;
+            font-size: 20px;
+            position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <button class="btn blue" type="button" onclick="change('black')">BLACK</button>
+        <button class="btn red" type="button" onclick="change('aqua')">AQUA</button>
+        <button class="btn green" type="button" onclick="change('red')">RED</button>
+        <button class="btn random" type="button" onclick="change('random')">RANDOM</button>
+    </div>
+    <script>
+        function change(color){
+            if(color=='random'){
+                document.body.style.backgroundColor=getRandomColor();
+            }
+            else{
+                document.body.style.backgroundColor=color;
+            }
+        }
+        function getRandomColor(){
+            const letter='0123456789ABCDEF';
+            let number='#';
+            for(let i=0;i<6;i++){
+                number+=letter[Math.floor(Math.random()*16)];
+            }
+            return number;
+        }
+    </script>
+</body>
+</html>
