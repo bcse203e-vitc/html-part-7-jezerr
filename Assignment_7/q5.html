@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let rep=[];
+        let k=0;
+        let s=prompt("Enter sentence");
+        let arrc=s.split("");
+        let len=arrc.length;
+        document.write("Number of character:"+len+"<br>");
+        let arrw=s.split(" ");
+        let leln=arrw.length;
+        document.write("Number of words:"+leln+"<br>");
+        for(let i=0;i<leln;i++){
+            for(let j=i+1;j<leln;j++){
+                if(arrw[i]==arrw[j]){
+                    rep[k]=arrw[i];
+                    k++;
+                }
+            }
+        }
+        document.write("Repeated words:"+"<br>");
+        for(let i=0;i<k;i++)
+        {
+            document.write(rep[i]+"<br>");
+        }
+    </script>
+</body>
+</html>
