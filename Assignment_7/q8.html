@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Enter number of elements in array"))
+        let arr=[];
+        for(let i=0;i<n;i++){
+            arr.push(parseInt(prompt("Enter the number")));
+        }
+        for(let i=0;i<n-1;i++){
+            for(let j=0;j<n-i-1;j++){
+                    if(arr[j]>arr[j+1]){
+                        let temp=arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=temp;
+                    }
+            }
+        }
+        document.write("Array-ascending order:"+arr+"<br>");
+        for(let i=0;i<n-1;i++){
+            for(let j=0;j<n-i-1;j++){
+                    if(arr[j]<arr[j+1]){
+                        let temp=arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=temp;
+                    }
+            }
+        }
+        document.write("Array-descending order:"+arr);
+    </script>
+</body>
+</html>
