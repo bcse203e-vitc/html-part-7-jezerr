@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Enter number of elements in array"))
+        let arr=[];
+        for(let i=0;i<n;i++){
+            arr.push(parseInt(prompt("Enter the number")));
+        }
+        arr.sort();
+        let a=arr[n-2];
+        let b=arr[n-3];
+        document.write("Second largest element:"+a+"<br>");
+        document.write("Third largest element(bonus):"+b);
+    </script>
+</body>
+</html>
